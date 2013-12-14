@@ -6,8 +6,8 @@ require 'net/http'
 require 'uri'
 
 # You can obtain you access id and secret key here: http://moz.com/products/api/keys
-ACCESS_ID	= "ACCESS_ID_HERE"
-SECRET_KEY	= "SECRET_KEY_HERE"
+ACCESS_ID	= "member-427dda717b"
+SECRET_KEY	= "a81de64c5853f81a84ca739472439b75"
 
 # Set your expires for several minutes into the future.
 # Values excessively far in the future will not be honored by the Mozscape API.
@@ -23,11 +23,11 @@ binary_signature = OpenSSL::HMAC.digest('sha1', SECRET_KEY, string_to_sign)
 URL_SAFE_SIGNATURE = CGI::escape(Base64.encode64(binary_signature).chomp)
 
 # This is the URL that we want metrics for.
-object_url = 'www.moz.com'
+object_url = 'www.smn-services.com'
 
 # Add up all the bit flags you want returned.
 # Learn more here: http://apiwiki.moz.com/query-parameters/
-cols = '103079215108'
+cols = '103616137253'
 
 # Now put your entire request together.
 # This example uses the Mozscape URL Metrics API.
